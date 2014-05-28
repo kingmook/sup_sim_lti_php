@@ -1,4 +1,4 @@
-sup_sim_lti_php
+Super Simple LTI Provider in PHP
 ===============
 
 Super simple implementation of an LTI provider in PHP.
