@@ -5,8 +5,8 @@
 //Make sure you include the LTI library (http://developers.imsglobal.org/imsphpexample.zip)
 require_once 'ims-blti/blti.php';
 
-//The LTI credentials as we know them
-$lti_auth = array('key' => 'key', 'secret' => 'secret');
+//Update these placeholders to reflect the key and secret you want to use (anything will do)
+$lti_auth = array('key' => 'putYourKeyHere', 'secret' => 'putYourSecretHere');
 
 //Build the LTI object with the credentials as we know them
 $context = new BLTI($lti_auth['secret'], false, false);
@@ -19,6 +19,14 @@ if ($context->info['oauth_consumer_key'] == $lti_auth['key']){
 		echo 'Valid LTI Connection. Output passed data:';
 		//Print out the passed data
 		echo '<pre>',print_r($context->info),'</pre>';
+		
+		/*
+		
+		Your Exciting Code Here
+		
+		*/
+		
+		
 	}
 	//We already checked the key so it's likely the user is using the wrong secret to generate their OAuth object
 	else{ 
