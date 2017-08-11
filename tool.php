@@ -9,7 +9,7 @@ require_once 'ims-blti/blti.php';
 $lti_auth = array('key' => 'key', 'secret' => 'secret');
 
 //Build the LTI object with the credentials as we know them
-$context = new BLTI('secret', false, false);
+$context = new BLTI($lti_auth['secret'], false, false);
 
 //Check if the correct key is being sent
 if ($context->info['oauth_consumer_key'] == $lti_auth['key']){
